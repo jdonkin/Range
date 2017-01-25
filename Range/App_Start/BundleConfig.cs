@@ -5,6 +5,8 @@ namespace Range
 {
   public class BundleConfig
   {
+    private const string AngularBundle = "~/bundles/angular";
+    private const string AngularLocation = "~/Scripts/angular.js";
     // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
     public static void RegisterBundles(BundleCollection bundles)
     {
@@ -26,6 +28,8 @@ namespace Range
       bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/site.css"));
+
+      bundles.Add(new ScriptBundle(AngularBundle).Include(AngularLocation));
     }
   }
 }
