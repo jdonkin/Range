@@ -18,18 +18,6 @@ namespace Range
           url: "{controller}/{action}/{id}",
           defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
       );
-
-      routes.MapRoute(
-          name: "Rental",
-          url: "{controller}/{action}",
-          defaults: new { controller = "Rental", action = "Index" }
-        );
-
-      routes.MapRoute(
-        name: "LaneRental",
-        url: "{controller}/{action}",
-        defaults: new { controller = "LaneRental", action = "Index" }
-        );
     }
   }
 }

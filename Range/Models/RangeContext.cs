@@ -9,6 +9,8 @@ namespace Range.Models
   public class RangeContext : DbContext
   {
     public IDbSet<Manufacturer> Manufacturer {get;set;}
-    public IDbSet<Guns> Gun { get; set; }
+    public IDbSet<Reservation> Reservations { get; set; }
+
+    public DbSet<Guns> Guns { get; set; }
   }
 }
