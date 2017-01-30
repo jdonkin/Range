@@ -1,0 +1,42 @@
+﻿[
+    {
+      "Id": 1,
+      "Name": "92-fs",
+      "Caliber": "9mm",
+      "ImageLocation": "http://localhost:4877/Content/Images/Manufacturers/Beretta/92FS.jpg",
+      "MagazineCapacity": 15,
+      "Maker": {
+        "Name": "Beretta",
+        "Url": "http://www.beretta.com/en-us/",
+        "Id": 1
+      }
+    },
+    {
+    "Id": 2,
+    "Name": "g22gen4",
+    "Caliber": ".40",
+    "ImageLocation": "http://localhost:4877/Content/Images/Manufacturers/Glock/Glock22.jpg",
+    "MagazineCapacity": 15,
+    "Maker": 
+    {
+      "Name": "Glock",
+      "Url": "https://us.glock.com/products/model/",
+      "Id": 2
+    }
+  },
+  {
+    "Id": 3,
+    "Name": "FNX-45",
+    "Caliber": ".45",
+    "ImageLocation": "http://localhost:4877/Content/Images/Manufacturers/FN/fnx-45.jpg",
+    "MagazineCapacity": 15,
+    "Maker": 
+    {
+      "Name": "FN",
+      "Url": "https://fnamerica.com/products/pistols/",
+      "Id": 3
+    }
+  }
+
+  ]
+

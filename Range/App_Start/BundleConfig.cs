@@ -10,6 +10,7 @@ namespace Range
     private const string AngularRoute = "~/Scripts/angular-route.js";
     private const string AngularApp = "~/Scripts/app.js";
     private const string ControllerPath = "~/Scripts/Controller";
+    private const string JSFileType = "*.js";
     // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
     public static void RegisterBundles(BundleCollection bundles)
     {
@@ -32,7 +33,8 @@ namespace Range
                 "~/Content/bootstrap.css",
                 "~/Content/site.css"));
 
-      bundles.Add(new ScriptBundle(AngularBundle).Include(AngularLocation, AngularRoute, AngularApp).IncludeDirectory(ControllerPath, "*.js"));
+      bundles.Add(new ScriptBundle(AngularBundle).Include(AngularLocation, AngularRoute, AngularApp)
+        .IncludeDirectory(ControllerPath, JSFileType));
 
     }
   }

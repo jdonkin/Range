@@ -10,5 +10,6 @@ namespace Range.Models
     public int Id { get; set; }
     public DateTime ReservationDate { get; set; }
     public List<Guns> GunsToReserve { get; set; }
+    public string Name { get; set; }
   }
 }

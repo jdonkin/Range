@@ -17,7 +17,7 @@ namespace Range.Controllers
         // GET: Rental
         public ActionResult Index()
         {
-            return View(db.Guns.ToList());
+            return View();
         }
 
         //// GET: Rental/Details/5
