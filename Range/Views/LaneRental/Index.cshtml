@@ -1,6 +1,42 @@
-﻿@{
+﻿@model IEnumerable<Range.Models.Reservation>
+
+@{
   ViewBag.Title = "Index";
 }
 
 <h2>Reserve a Lane in Advance</h2>
 
+<div class="container" ng-app="app" data-ng-init="Initialize(@Newtonsoft.Json.JsonConvert.SerializeObject(Model))">
+    <div ng-controller="laneController">
+        <ng-form class="col-md-12">
+            <div class="col-md-12 form-control">
+                <label for="nameForReservation" >Name:</label>
+                <input type="text" name="nameForReservation" ng-model="nameForReservation"/>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="dayToReserve">Date:</label>
+                <input type="date" name="dayToReserve" ng-model="dateReserved"/>
+            </div>
+            <div class="form-group">
+                <label for="timeToReserve">Select an Hour Block:</label>
+                <select name="timeToReserve" ng-model="timeReserved">
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <button ng-click="reserveLane()">Reserve Your Lane</button>
+            </div>
+            
+        </ng-form>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/angular")
