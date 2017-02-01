@@ -8,18 +8,18 @@
 
 <div class="container" ng-app="app" data-ng-init="Initialize(@Newtonsoft.Json.JsonConvert.SerializeObject(Model))">
     <div ng-controller="laneController">
-        <ng-form name="reservationForm" class="col-md-12">
+        <ng-form name="reservationForm" class="col-md-12" ng-model="reservationForm" >
             <div class="col-md-12 form-control">
                 <label for="nameForReservation" >Name:</label>
-                <input type="text" name="nameForReservation" ng-model="nameForReservation"/>
+                <input type="text" name="nameForReservation" ng-model="reservationForm.name" ng-change="formChanged()" />
             </div>
             <div class="col-md-6 form-group">
                 <label for="dayToReserve">Date:</label>
-                <input type="date" name="dayToReserve" ng-model="dateReserved"/>
+                <input type="date" name="dayToReserve" ng-model="reservationForm.reservationDate"/>
             </div>
             <div class="form-group">
                 <label for="timeToReserve">Select an Hour Block:</label>
-                <select name="timeToReserve" ng-model="timeReserved">
+                <select name="timeToReserve" ng-model="reservationForm.reservationTime">
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
@@ -34,7 +34,12 @@
             <div class="form-control">
                 <button ng-click="reserveLane()">Reserve Your Lane</button>
             </div>
-            
+            <div class="label-success">
+                <span>{{successMessage}}</span>
+            </div>
+            <div class="label-danger">
+                <span>{{errorMessage}}</span>
+            </div>
         </ng-form>
         
     </div>

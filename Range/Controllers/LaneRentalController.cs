@@ -25,21 +25,28 @@ namespace Range.Controllers
     [HttpPost]
     public ActionResult SaveReservation(string name, DateTime reservedDate, string timeReserved)
     {
-      var reservation = new Reservation()
+      try
       {
-        Name = name,
-        ReservationDate = reservedDate,
-        ReservationTime = timeReserved
-      };
-
-      if (ModelState.IsValid)
-      {
-        db.Reservations.Add(reservation);
-        db.SaveChanges();
-        Response.StatusCode = 200;
+        if (ModelState.IsValid)
+        {
+          var reservation = new Reservation()
+          {
+            Name = name,
+            ReservationDate = reservedDate,
+            ReservationTime = timeReserved
+          };
+          db.Reservations.Add(reservation);
+          db.SaveChanges();
+          Response.StatusCode = 200;
+          return View("Index");
+        }
         return View("Index");
       }
-      return View("Error");
+      catch (Exception)
+      {
+        return View("Error");
+      }
+
     }
   }
 }
