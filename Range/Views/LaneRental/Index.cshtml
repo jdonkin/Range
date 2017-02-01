@@ -8,7 +8,7 @@
 
 <div class="container" ng-app="app" data-ng-init="Initialize(@Newtonsoft.Json.JsonConvert.SerializeObject(Model))">
     <div ng-controller="laneController">
-        <ng-form class="col-md-12">
+        <ng-form name="reservationForm" class="col-md-12">
             <div class="col-md-12 form-control">
                 <label for="nameForReservation" >Name:</label>
                 <input type="text" name="nameForReservation" ng-model="nameForReservation"/>
@@ -36,6 +36,7 @@
             </div>
             
         </ng-form>
+        
     </div>
 </div>
 

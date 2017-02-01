@@ -80,3 +80,6 @@ c:\users\jdonkin\documents\visual studio 2015\Projects\Range\Range\bin\Microsoft
 c:\users\jdonkin\documents\visual studio 2015\Projects\Range\Range\obj\Debug\Range.csprojResolveAssemblyReference.cache
 c:\users\jdonkin\documents\visual studio 2015\Projects\Range\Range\obj\Debug\Range.dll
 c:\users\jdonkin\documents\visual studio 2015\Projects\Range\Range\obj\Debug\Range.pdb
+C:\Users\jdonkin\documents\visual studio 2015\Projects\Range\Range\obj\Debug\Range.Migrations.InitialCreate.resources
+C:\Users\jdonkin\documents\visual studio 2015\Projects\Range\Range\obj\Debug\Range.csproj.GenerateResource.Cache
+C:\Users\jdonkin\documents\visual studio 2015\Projects\Range\Range\obj\Debug\Range.Migrations.Initial.resources

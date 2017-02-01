@@ -20,9 +20,12 @@
             $scope.name = $scope.nameForReservation;
             $scope.reservationDate = $scope.dateReserved;
             $scope.reservationTime = $scope.timeReserved;
-            
-            $http.post('LaneRentalController/SaveReservation', {$scope.name, $scope.reservationDate, $scope.reservationTime})
-        }
+
+            $http.post('LaneRental/SaveReservation', { name: $scope.name, reservedDate: $scope.reservationDate, timeReserved: $scope.reservationTime })
+            .then(function onSuccess(response) {
+                $scope.reservationForm.$setPristine();
+            });
+        };
 
         activate();
 

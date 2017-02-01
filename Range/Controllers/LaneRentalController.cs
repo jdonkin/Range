@@ -17,10 +17,29 @@ namespace Range.Controllers
       return View();
     }
 
-    [HttpPost]
-    public ActionResult SaveReservation()
+    public ActionResult Error()
     {
-      throw new NotImplementedException();
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult SaveReservation(string name, DateTime reservedDate, string timeReserved)
+    {
+      var reservation = new Reservation()
+      {
+        Name = name,
+        ReservationDate = reservedDate,
+        ReservationTime = timeReserved
+      };
+
+      if (ModelState.IsValid)
+      {
+        db.Reservations.Add(reservation);
+        db.SaveChanges();
+        Response.StatusCode = 200;
+        return View("Index");
+      }
+      return View("Error");
     }
   }
 }

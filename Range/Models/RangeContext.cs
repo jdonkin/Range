@@ -8,9 +8,15 @@ namespace Range.Models
 {
   public class RangeContext : DbContext
   {
-    public IDbSet<Manufacturer> Manufacturer {get;set;}
-    public IDbSet<Reservation> Reservations { get; set; }
+    public DbSet<Manufacturer> Manufacturer {get;set;}
+    public DbSet<Reservation> Reservations { get; set; }
 
     public DbSet<Guns> Guns { get; set; }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+      Database.SetInitializer<RangeContext>(null);
+      base.OnModelCreating(modelBuilder);
+    }
   }
 }

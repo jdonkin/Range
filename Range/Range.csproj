@@ -203,6 +203,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701252055177_InitialCreate.cs" />
+    <Compile Include="Migrations\201701252055177_InitialCreate.Designer.cs">
+      <DependentUpon>201701252055177_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702010641163_Initial.cs" />
+    <Compile Include="Migrations\201702010641163_Initial.Designer.cs">
+      <DependentUpon>201702010641163_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Guns.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -288,6 +297,12 @@
     <Content Include="Views\Rental\Details.cshtml" />
     <Content Include="Views\Rental\Edit.cshtml" />
     <Content Include="Views\Rental\Index.cshtml" />
+    <Content Include="Views\LaneRental\Error.cshtml" />
+    <Content Include="Views\Test\Create.cshtml" />
+    <Content Include="Views\Test\Delete.cshtml" />
+    <Content Include="Views\Test\Details.cshtml" />
+    <Content Include="Views\Test\Edit.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -306,6 +321,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701252055177_InitialCreate.resx">
+      <DependentUpon>201701252055177_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702010641163_Initial.resx">
+      <DependentUpon>201702010641163_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
